@@ -1,10 +1,12 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-github-demo",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Gatsby with GitHub API",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "John L. Armstrong IV",
   "dependencies": {
+    "case": "^1.6.3",
+    "cross-env": "^7.0.2",
     "gatsby": "^2.23.3",
     "gatsby-image": "^2.4.7",
     "gatsby-plugin-manifest": "^2.4.11",
@@ -12,11 +14,13 @@
     "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-sharp": "^2.6.11",
     "gatsby-source-filesystem": "^2.3.11",
+    "gatsby-source-graphql": "^2.5.5",
     "gatsby-transformer-sharp": "^2.5.5",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^4.3.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"
@@ -27,7 +31,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
